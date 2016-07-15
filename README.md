@@ -1,3 +1,2 @@
 # mean-web-development
-Ｍｅａｎ　Ｗｅｂ　Ｄｅｖｅｌｏｐｍｅｎｔ
-    －　ｂｙ　Ａｍｏｓ　Ｑ．Ｈａｖｉｖ
+Code in the progress of learning <Mean Web Development> (- by Amos Q.Haviv).
