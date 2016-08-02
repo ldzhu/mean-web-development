@@ -6,7 +6,8 @@ var express = require('express'),
     session = require('express-session');
 
 var config = require('./config'),
-    route_index = require('../app/routes/index.server.route.js');
+    route_index = require('../app/routes/index.server.route'),
+    route_user = require('../app/routes/user.server.route');
 
 module.exports = function() {
     var app = express();
@@ -17,10 +18,10 @@ module.exports = function() {
         app.use(compression());
     }
 
+    app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({
         extended: true
     }));
-    app.use(bodyParser.json());
     app.use(methodOverride());
 
     app.use(session({
@@ -33,6 +34,7 @@ module.exports = function() {
     app.set('view engine', 'ejs');
 
     route_index(app);
+    route_user(app);
 
     app.use(express.static('./public'));
 
