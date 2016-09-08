@@ -6,8 +6,7 @@ var UserSchema = new Schema({
     firstName: String,
     lastName: String,
     email: String,
-    userName: String,
+    username: String,
     password: String
 });
-console.log('hahahahahah');
 mongoose.model('User', UserSchema);
